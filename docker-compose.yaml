@@ -1,0 +1,11 @@
+name: "pdf_viewer"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "${PORT:-9191}:${PORT:-9191}"
+    environment:
+      - "PORT=${PORT:-9191}"
